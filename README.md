@@ -144,47 +144,51 @@ When you run this at the end it will tell you that you have to Restart your sess
 
 OK, now for the whole project, since this whole projects is really big and there will be so many things to go over, I believe it's best that you clone the repository I had on github and most importantly once you cloned the repository, just go on the data-processing folder, and look at the data-proccessing.ipynb file, you can view it by downloading it into google drive, the same way you did with the requirements.txt file, and just follow along what i did, i have comments, text and code that will guide you there. I believe this is the most straight forward method to show you how to run a LLM without taking so long and that you most importantly figure out things on by your own as that's what makes you a better developer along side working with others of course.
 Right now I will explain key points and an overview what you will get from this project.
+
 In this whole project we will go over how to use RAG with Gemma-3b-ints float16 at first but than use others models like gpt-3.5 turbo, gpt-4o, llama3, xgen and bloom. Gemma can be a great model to start as it's not big but not very small that it's useless. Now let me go over what this 3b stands for. In the LLM's there are parameters, these parameters are also seen in Deep Learning as the Weights & Bias of the model and of course when i say "model" I'm referring to the base Large Language Model (LLM) or Algorithm but more exactly LLM. 
 
 Let's clear up Parameters: Inside a LLM there is a neural network and in this there are layers and in layers there are neurons. Each neuron finds a similarity with itself onto another neuron across another layer, these similarities are done with the interconnection of each neuron but that connection has relevant amount of feedback towards how similar these neurons are to each other and the connection between them. Depending on the similarity becomes weighted, the more weight there is on the connection, the more it will influence that neuron and that neuron onto another neuron. That's for weights.. But what about Bias.
 Bias is actually done at the training process like the weights but there set to random values onto each neuron to effect a different response to say looking at the same input data as each neuron in the whole network does in each swing, this is very important, because that's what gives the model really a generalizing and say that intelligence that ordinary people see when it can respond to different subjects.. To be more specific:
-Initialization:
-Biases (and weights) are initially set to small random values or zeros.
-This randomness helps to prevent symmetry, allowing different neurons to learn different features. (features are characteristics and patterns it finds in the input data, each neuron grabs a different features because it's value is set differently from the bias but also to the weights.)
+
+## Initialization:
+* Biases (and weights) are initially set to small random values or zeros.
+* This randomness helps to prevent symmetry, allowing different neurons to learn different features. (features are characteristics and patterns it finds in the input data, each neuron grabs a different features because it's value is set differently from the bias but also to the weights.)
 
 1. Initial Forward Pass:
-With these initial random biases and weights, the network's initial predictions to the outputs are varied and likely inaccurate.
+* With these initial random biases and weights, the network's initial predictions to the outputs are varied and likely inaccurate.
 
 However this is where the model than corrects its inaccuracy, by later using the gradients during backpropagation.
-Training Process
+
+## Training Process
 2. Forward Pass:
-Inputs are fed through the network, and each neuron's output is calculated using its current weights and biases.
-For each neuron: 𝑧=∑𝑖𝑤𝑖𝑥𝑖+𝑏z=∑i​wi​xi​+b
-The activation function (e.g., sigmoid, ReLU) is applied to z to get the final output.
+* Inputs are fed through the network, and each neuron's output is calculated using its current weights and biases.
+* For each neuron: 𝑧=∑𝑖𝑤𝑖𝑥𝑖+𝑏z=∑i​wi​xi​+b
+* The activation function (e.g., sigmoid, ReLU) is applied to z to get the final output.
 
 3. Loss Calculation:
-The network's outputs are compared to the actual target values using a loss function.
-The loss function quantifies how far off the network's predictions are from the true values.
+* The network's outputs are compared to the actual target values using a loss function.
+* The loss function quantifies how far off the network's predictions are from the true values.
 
 4. Backpropagation:
-The loss is propagated back through the network to calculate gradients for each weight and bias.
-Gradients indicate the direction and magnitude of change needed to reduce the loss.
+* The loss is propagated back through the network to calculate gradients for each weight and bias.
+* Gradients indicate the direction and magnitude of change needed to reduce the loss.
 
 5. Gradient Descent:
-Weights and biases are updated using the calculated gradients
-𝑤𝑖=𝑤𝑖−𝜂∂𝐿∂𝑤𝑖wi​=wi​−η∂wi​∂L​
-𝑏=𝑏−𝜂∂𝐿∂𝑏b=b−η∂b∂L​
-This process adjusts the weights and biases to minimize the loss.
+* Weights and biases are updated using the calculated gradients
+> 𝑤𝑖=𝑤𝑖−𝜂∂𝐿∂𝑤𝑖wi​=wi​−η∂wi​∂L​
+> 𝑏=𝑏−𝜂∂𝐿∂𝑏b=b−η∂b∂L​
+* This process adjusts the weights and biases to minimize the loss.
 
 During training, biases (along with weights) are adjusted systematically through backpropagation and gradient descent. This process aims to minimize the loss function, which measures how far the network's predictions are from the actual targets.
-Convergence and Bias Adjustment
+
+## Convergence and Bias Adjustment
 6. Convergence:
-As training progresses, weights and biases are adjusted iteratively.
-The network's predictions become more accurate, and the loss decreases.
+* As training progresses, weights and biases are adjusted iteratively.
+* The network's predictions become more accurate, and the loss decreases.
 
 7. Bias and Weight Adjustment:
-Both weights and biases are fine-tuned to reduce the error in predictions.
-The randomness from the initial biases is reduced as the biases are adjusted to optimal values from the gradients, that help improve the network's accuracy.
+* Both weights and biases are fine-tuned to reduce the error in predictions.
+* The randomness from the initial biases is reduced as the biases are adjusted to optimal values from the gradients, that help improve the network's accuracy.
 
 8. Reduced Randomness:
 The adjustment of biases (and weights) during training reduces the initial randomness.
