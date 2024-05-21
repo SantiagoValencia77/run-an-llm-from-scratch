@@ -191,17 +191,20 @@ During training, biases (along with weights) are adjusted systematically through
 * The randomness from the initial biases is reduced as the biases are adjusted to optimal values from the gradients, that help improve the network's accuracy.
 
 8. Reduced Randomness:
-The adjustment of biases (and weights) during training reduces the initial randomness.
-This helps the network stabilize and produce consistent, accurate outputs.
+* The adjustment of biases (and weights) during training reduces the initial randomness.
+* This helps the network stabilize and produce consistent, accurate outputs.
 
 As training progresses, biases and weights converge to values that help the network make accurate predictions. The randomness from initialization is gradually reduced, and the network becomes more stable and focused.
 
-I know this can be a bit complicated and overwhelming, but let me explain it in layman terms, really the bias and weights shine in 2 areas. 1) Is during the training process were the bias is set to different random values on each neuron so that neuron can retrieve a different characteristics or feature on the input data compared to other neurons, since that neuron had a different value that was placed with the bias and was effected on the connection from the weight, that will make it generalize more on the output and create a response with more generality. 2) Is during backpropagation, when the gradient looks at the bias, it will systematically adjust the value again based on the loss, so in other words, the bias serves as viewer to a problem that the gradient as tool can adjust the bias value based on the loss than can be seen. This will make the gradient adjusted those value and reduce loss being shown by the bias on each neuron.
+
+I know this can be a bit complicated and overwhelming, but let me explain it in layman terms, really the bias and weights shine in 2 areas. 
+
+1) Is during the training process were the bias is set to different random values on each neuron so that neuron can retrieve a different characteristics or feature on the input data compared to other neurons, since that neuron had a different value that was placed with the bias and was effected on the connection from the weight, that will make it generalize more on the output and create a response with more generality.
+
+2) Is during backpropagation, when the gradient looks at the bias, it will systematically adjust the value again based on the loss, so in other words, the bias serves as viewer to a problem that the gradient as tool can adjust the bias value based on the loss than can be seen. This will make the gradient adjusted those value and reduce loss being shown by the bias on each neuron.
 
 Now that you understand parameters, you can understand how a model that has 140 Billion parameters can give a more concise and general response compared to a 8–40 billion parameters model, because these parameters capture different features and give and outlet to fixing more errors that around seen from a few points. However, the more parameters a model has the more computation is needed since the connection and overall transfer of data between is so much more frequent and bigger in scale which makes the hardware need to work faster and also with more tasks.
+
 I highly recommend, if you want to understand more how this process works such as how a LLM can receive input and calculate -> to making output exactly in a more visual way, view these videos below:
 How GPT works: https://youtu.be/wjZofJX0v4M?si=nsAQAprPuT2QEqZK
 Neural Networks: https://youtu.be/aircAruvnKk?si=pNLQM6IytgaYlUBF
-
-If your still here, make sure to view the repository on how to make a LLM from scratch, by default that repo will show it on google colab. On the next advance steps to load it in vs code, by standard it will be around the linux environment, specifically WSL2, but Iwill provide other repo's with the same data on windows. If your using a macbook, using linux can work since the share a lot more attributes compared to windows, however macbook has it's own os and sometimes certain linux features need more integration within the macbook, so if you run to issue with that just troubleshoot it the way as i told you before: search it, ask it and finally ask it in our repo.
-That's it for now, hope you guys a have a great day!
