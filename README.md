@@ -24,17 +24,27 @@ You should get something like this:
   docker-desktop         Stopped         2
 ~~~
 Ignore the docker, that shows up if you have installed docker desktop. What's important though is to see that distribution name enabled such as 'Ubuntu', check the version number as well, I'd say make sure it's version 2.
+
 If you ran into any sort of issues here, let's say that once you install wsl, the terminal prompted: That you need you enabled a VM on your BIOS, I'd say talk to the manufactures of your computer and try to resolve it with them, In the meantime though do not worry, while you get a response you can look at this github repo, on doing this project with windows, so that you don't get left behind: https://github.com/SantiagoValencia77/gen-llm-on-windows
+
 Now that you have Ubuntu, now we to to configure a few things with nvidia.. Since Deep Learning often uses computational levels that GPU process faster and easier compared to CPU, you are going to have use a GPU. If you have an nvidia gpu that has a vram > = 11GB, than your good. If not, no worries, just use google collab for now.
-Nvidia Installation
+
+### Nvidia Installation
+
 If you're a macbook user, ignore this step, everyone else view this:
-Install Nvidia CUDA Toolkit: https://developer.nvidia.com/cuda-toolkit I advice to install it in a folder around your root directory, because you will need to touch these folders often, and online it's usually just referred to this area
-Install Nvidia cuDNN Library: https://developer.nvidia.com/cudnn-downloads
+
+1. Install Nvidia CUDA Toolkit: https://developer.nvidia.com/cuda-toolkit I advice to install it in a folder around your root directory, because you will need to touch these folders often, and online it's usually just referred to this area
+2. Install Nvidia cuDNN Library: https://developer.nvidia.com/cudnn-downloads
 
 Once you installed these Badboys in the right directory, that's easy to reach. Now we get to start working on the project.
 
+
 Let's go to Google Drive (We need this for google colab). In their make a folder called 'deep-learning', than make a subfolder called 'llms'.
+
 Now head to Google Colab, In there by default it will show a screen to open or create a notebook, in our case we created a folder to store the notebook, so head to that folder, than create the notebook there.
+![image](https://github.com/SantiagoValencia77/run-an-llm-from-scratch/assets/159969500/3a1691b8-f08e-4224-a55c-686c23364b7e)
+
+
 Head to 'File' than 'New Notebook'Click on the name and change it to whatever you wantNow to keep things clean. Click on file again and find 'move', click on it. In this screen, try to navigate into the folder you made in drive. (google colab connects it's data into the files in drive).
 Now by default, colab keeps the most common dependencies inside there environments for Machine Learning and Deep Learning, so when you make a notebook you already have these environments. However, you don't have all of them, and there are several dependencies we will use that aren't installed into colab. To go across this, we're just going to grab and place things into the drive itself.
 Make a file really anywhere on your computer called requirements.txt, once you open this file, you should have this content inside it:
