@@ -23,7 +23,7 @@ You should get something like this:
   docker-desktop-data    Stopped         2
   docker-desktop         Stopped         2
 ~~~
-Ignore the docker, that shows up if you have installed docker desktop. What's important though is to see that distribution name enabled such as 'Ubuntu', check the version number as well, I'd say make sure it's version 2.
+Ignore the docker, that shows up if you don't have docker desktop. What's important though is to see that distribution name enabled such as 'Ubuntu', check the version number as well, I'd say make sure it's version 2.
 
 If you ran into any sort of issues here, let's say that once you install wsl, the terminal prompted: That you need you enabled a VM on your BIOS, I'd say talk to the manufactures of your computer and try to resolve it with them, In the meantime though do not worry, while you get a response you can look at this github repo, on doing this project with windows, so that you don't get left behind: https://github.com/SantiagoValencia77/gen-llm-on-windows
 
@@ -43,11 +43,18 @@ Let's go to Google Drive (We need this for google colab). In their make a folder
 
 Now head to Google Colab, In there by default it will show a screen to open or create a notebook, in our case we created a folder to store the notebook, so head to that folder, than create the notebook there.
 ![image](https://github.com/SantiagoValencia77/run-an-llm-from-scratch/assets/159969500/3a1691b8-f08e-4224-a55c-686c23364b7e)
+Head to 'File' than 'New Notebook'
 
+![image](https://github.com/SantiagoValencia77/run-an-llm-from-scratch/assets/159969500/0f4cee45-b1c3-49db-80e3-58b3c909e5aa)
+Click on the name and change it to whatever you want
 
-Head to 'File' than 'New Notebook'Click on the name and change it to whatever you wantNow to keep things clean. Click on file again and find 'move', click on it. In this screen, try to navigate into the folder you made in drive. (google colab connects it's data into the files in drive).
+Now to keep things clean. Click on file again and find 'move', click on it. In this screen, try to navigate into the folder you made in drive. (google colab connects it's data into the files in drive).
+
 Now by default, colab keeps the most common dependencies inside there environments for Machine Learning and Deep Learning, so when you make a notebook you already have these environments. However, you don't have all of them, and there are several dependencies we will use that aren't installed into colab. To go across this, we're just going to grab and place things into the drive itself.
+
+
 Make a file really anywhere on your computer called requirements.txt, once you open this file, you should have this content inside it:
+~~~
 torch
 PyMuPDF==1.23.26
 matplotlib
@@ -65,18 +72,44 @@ wheel
 lxml_html_clean
 newspaper3k
 flash-attn
+~~~
+
 Save the file, now head back into google drive where you made the folder for llm (we're the notebook is in) and save the requirements.txt file you just made in there.
-Placed requirements.txt in the same folderNext, on the notebook mount your drive onto the notebook so you can easily access your files from the there, after writing the code below, make sure to click on "shift + enter" to run that code cell:
+![image](https://github.com/SantiagoValencia77/run-an-llm-from-scratch/assets/159969500/e5ab9634-86ed-44c9-b7fb-1a4a670d7311)
+Placed requirements.txt in the same folder.
+
+Next, on the notebook mount your drive onto the notebook so you can easily access your files from the there, after writing the code below, make sure to click on "shift + enter" to run that code cell:
+~~~
 from google.colab import drive, files
 drive.mount('/content/drive')
-Sign in with your google account (One your using in google drive)You should get a return prompt like this:
+~~~
+
+Sign in with your google account (One your using in google drive)
+![image](https://github.com/SantiagoValencia77/run-an-llm-from-scratch/assets/159969500/74bce54f-1147-4d1c-836b-ff26e778166b)
+
+You should get a return prompt like this:
+~~~
 Mounted at /content/drive
+~~~
 Once you mounted the drive, click on the folder button on the left side bar:
-Click on driveFind the requirements.txt you uploaded into drive, afterwards right-click on the file and select 'copy path'.
+![image](https://github.com/SantiagoValencia77/run-an-llm-from-scratch/assets/159969500/589dba82-bea9-4755-a6b9-5998914c6398)
+Click on drive
+![image](https://github.com/SantiagoValencia77/run-an-llm-from-scratch/assets/159969500/36d37703-0f9d-427a-811e-2fcd337ef9bb)
+
+Find the requirements.txt you uploaded into drive, afterwards right-click on the file and select 'copy path'.
+
 Before we upload the requirements.txt.. We need to connect a GPU that google offers us, we can do this by click on the top right arrow and selecting 'change runtime type':
+![image](https://github.com/SantiagoValencia77/run-an-llm-from-scratch/assets/159969500/bdf10047-bc5c-4c6f-9483-6054da2dad70)
+
+
 Now you should see under "Hardware Accelerator" the different hardware google gives to connect to the notebook, in our case we aren't going to use the standard CPU because that would be to slow for the instance of the model, so let's choose the free T4 GPU, it will likely tell you that it will terminate the session but that doesn't matter, just rerun all the cells we did:
-Click on saveOne thing you should know about google colab is that there are time limits when you run hardware, there isn't an exact time limit they give you because that information isn't public but due to my experience, I found that google colab usually time's out your session when you've been using it for around 3–4 hours straight, afterwards I really found that you can't use any hardware until 24 hours pass.. I know this isn't ideal but it's the best option that's available right now, especially for free 🤷‍♂️
+![image](https://github.com/SantiagoValencia77/run-an-llm-from-scratch/assets/159969500/a0fe051d-ce27-4b84-8411-ad5db2a46bdc)
+Click on save
+
+One thing you should know about google colab is that there are time limits when you run hardware, there isn't an exact time limit they give you because that information isn't public but due to my experience, I found that google colab usually time's out your session when you've been using it for around 3–4 hours straight, afterwards I really found that you can't use any hardware until 24 hours pass.. I know this isn't ideal but it's the best option that's available right now, especially for free 🤷‍♂️
+
 Now to make sure your T4 GPU is connected, you can run this code, which will check if the GPU is running and list the name of the GPU, otherwise if not it will print that there isn't a GPU:
+~~~
 import torch
 # This will show a bool response (True/False)
 if torch.cuda.is_available():
@@ -86,11 +119,15 @@ if torch.cuda.is_available():
 else:
   # Otherwise if False, print this..
   print("GPU not available")
+~~~
 If for some reason you see that the GPU wasn't available, please be sure you wrote this exact code I did, otherwise contact google colab, contacting them can be cumbersome, so I just recommend to go to the repo your looking on my github and leave a comment, so me and the community can see if we can help you! As always get help from searching on google from the problem your facing, that's the best tool to use as a developer and also ask ChatGPT if it's too confusing, it can guide you with your specific setup, Look online, than if you can't find a solution say on Stack Overflow, than just comment on the repo to see if we can help you get an exact answer :)
 
-After seeing a response like this: "GPU: Tesla T4" we can now go to the next step. On the cell below (FYI: If your not inside a cell, clicking 'a' will create a cell above and clicking 'b' will make a cell below, to delete cells it's 'x') in the notebook install the requirements.txt from that path your copied:
+
+After seeing a response like this: "GPU: Tesla T4" we can now go to the next step. On the cell below *(FYI: If your not inside a cell, clicking 'a' will create a cell above and clicking 'b' will make a cell below, to delete cells it's 'x')* in the notebook install the requirements.txt from that path your copied:
+~~~
 # Be sure to that you place on the path here instead, the path you copied earlier from requirements.txt
 !pip install -r "/content/drive/MyDrive/deep-learning/demonstration/llms/requirements.txt"
+~~~
 When you run this at the end it will tell you that you have to Restart your session which is fine, do that and you will need to re run all the cells again but the dependencies you just installed should be in your environment now. You can comment out now that pip install we did for the requirements.txt.
 
 OK, now for the whole project, since this whole projects is really big and there will be so many things to go over, I believe it's best that you clone the repository I had on github and most importantly once you cloned the repository, just go on the data-processing folder, and look at the data-proccessing.ipynb file, you can view it by downloading it into google drive, the same way you did with the requirements.txt file, and just follow along what i did, i have comments, text and code that will guide you there. I believe this is the most straight forward method to show you how to run a LLM without taking so long and that you most importantly figure out things on by your own as that's what makes you a better developer along side working with others of course.
