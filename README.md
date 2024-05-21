@@ -42,10 +42,13 @@ Once you installed these Badboys in the right directory, that's easy to reach. N
 Let's go to Google Drive (We need this for google colab). In their make a folder called 'deep-learning', than make a subfolder called 'llms'.
 
 Now head to Google Colab, In there by default it will show a screen to open or create a notebook, in our case we created a folder to store the notebook, so head to that folder, than create the notebook there.
+
 ![image](https://github.com/SantiagoValencia77/run-an-llm-from-scratch/assets/159969500/3a1691b8-f08e-4224-a55c-686c23364b7e)
+
 Head to 'File' than 'New Notebook'
 
 ![image](https://github.com/SantiagoValencia77/run-an-llm-from-scratch/assets/159969500/0f4cee45-b1c3-49db-80e3-58b3c909e5aa)
+
 Click on the name and change it to whatever you want
 
 Now to keep things clean. Click on file again and find 'move', click on it. In this screen, try to navigate into the folder you made in drive. (google colab connects it's data into the files in drive).
@@ -75,7 +78,9 @@ flash-attn
 ~~~
 
 Save the file, now head back into google drive where you made the folder for llm (we're the notebook is in) and save the requirements.txt file you just made in there.
+
 ![image](https://github.com/SantiagoValencia77/run-an-llm-from-scratch/assets/159969500/e5ab9634-86ed-44c9-b7fb-1a4a670d7311)
+
 Placed requirements.txt in the same folder.
 
 Next, on the notebook mount your drive onto the notebook so you can easily access your files from the there, after writing the code below, make sure to click on "shift + enter" to run that code cell:
@@ -85,6 +90,7 @@ drive.mount('/content/drive')
 ~~~
 
 Sign in with your google account (One your using in google drive)
+
 ![image](https://github.com/SantiagoValencia77/run-an-llm-from-scratch/assets/159969500/74bce54f-1147-4d1c-836b-ff26e778166b)
 
 You should get a return prompt like this:
@@ -92,18 +98,24 @@ You should get a return prompt like this:
 Mounted at /content/drive
 ~~~
 Once you mounted the drive, click on the folder button on the left side bar:
+
 ![image](https://github.com/SantiagoValencia77/run-an-llm-from-scratch/assets/159969500/589dba82-bea9-4755-a6b9-5998914c6398)
+
 Click on drive
+
 ![image](https://github.com/SantiagoValencia77/run-an-llm-from-scratch/assets/159969500/36d37703-0f9d-427a-811e-2fcd337ef9bb)
 
 Find the requirements.txt you uploaded into drive, afterwards right-click on the file and select 'copy path'.
 
 Before we upload the requirements.txt.. We need to connect a GPU that google offers us, we can do this by click on the top right arrow and selecting 'change runtime type':
+
 ![image](https://github.com/SantiagoValencia77/run-an-llm-from-scratch/assets/159969500/bdf10047-bc5c-4c6f-9483-6054da2dad70)
 
 
 Now you should see under "Hardware Accelerator" the different hardware google gives to connect to the notebook, in our case we aren't going to use the standard CPU because that would be to slow for the instance of the model, so let's choose the free T4 GPU, it will likely tell you that it will terminate the session but that doesn't matter, just rerun all the cells we did:
+
 ![image](https://github.com/SantiagoValencia77/run-an-llm-from-scratch/assets/159969500/a0fe051d-ce27-4b84-8411-ad5db2a46bdc)
+
 Click on save
 
 One thing you should know about google colab is that there are time limits when you run hardware, there isn't an exact time limit they give you because that information isn't public but due to my experience, I found that google colab usually time's out your session when you've been using it for around 3–4 hours straight, afterwards I really found that you can't use any hardware until 24 hours pass.. I know this isn't ideal but it's the best option that's available right now, especially for free 🤷‍♂️
