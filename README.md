@@ -13,9 +13,9 @@ If you are using windows follow the steps i'll show. Otherwise just ignore this 
 I can't tell were in the future you will see this so the steps may change which is why the best way is to look at the document from Microsoft themselves.
 > 
 After you have downloaded WSL2, you can make sure that you have (This can be on something like Powershell):
-
-~~~wsl --install --verbose~~~
-
+~~~
+wsl --install --verbose
+~~~
 You should get something like this:
 ~~~
   NAME                   STATE           VERSION
@@ -23,7 +23,6 @@ You should get something like this:
   docker-desktop-data    Stopped         2
   docker-desktop         Stopped         2
 ~~~
-
 Ignore the docker, that shows up if you have installed docker desktop. What's important though is to see that distribution name enabled such as 'Ubuntu', check the version number as well, I'd say make sure it's version 2.
 If you ran into any sort of issues here, let's say that once you install wsl, the terminal prompted: That you need you enabled a VM on your BIOS, I'd say talk to the manufactures of your computer and try to resolve it with them, In the meantime though do not worry, while you get a response you can look at this github repo, on doing this project with windows, so that you don't get left behind: https://github.com/SantiagoValencia77/gen-llm-on-windows
 Now that you have Ubuntu, now we to to configure a few things with nvidia.. Since Deep Learning often uses computational levels that GPU process faster and easier compared to CPU, you are going to have use a GPU. If you have an nvidia gpu that has a vram > = 11GB, than your good. If not, no worries, just use google collab for now.
