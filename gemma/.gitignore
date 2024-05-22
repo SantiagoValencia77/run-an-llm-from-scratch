@@ -1,1 +1,3 @@
 venv/
+data-processing/pdf/
+chunks_tokenized.csv/
