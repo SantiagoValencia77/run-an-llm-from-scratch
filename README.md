@@ -147,6 +147,20 @@ Right now I will explain key points and an overview what you will get from this 
 
 After you have done all the steps in the data-processing.ipynb successfully, you should view: **medical-rag-gen.ipynb** file, that follows the integration with rag pipeline into the gemma
 
+## Inside the data-processing.ipynb
+
+The first thing you should do is to make a virtual environment to store your dependencies if you are doing this locally like in VS Code, otherwise if your still on colab don't worry about this, as you already installed the dependencies:
+~~~
+python -m venv venv
+~~~
+
+~~~
+pip install -r requirements.txt
+~~~
+
+Since we can't exactly request from a url on a dependencies with the requirements.txt or else it would mess up the other dependencies, you would have to manually type in the command in the console, in order to install the right torch version for cuda, view pytorch website for the latest installation depending on your os:
+https://pytorch.org/
+
 In this whole project we will go over how to use RAG with Gemma-3b-ints float16 at first but than use others models like gpt-3.5 turbo, gpt-4o, llama3, xgen and bloom. Gemma can be a great model to start as it's not big but not very small that it's useless. Now let me go over what this 3b stands for. In the LLM's there are parameters, these parameters are also seen in Deep Learning as the Weights & Bias of the model and of course when i say "model" I'm referring to the base Large Language Model (LLM) or Algorithm but more exactly LLM. 
 
 Let's clear up Parameters: Inside a LLM there is a neural network and in this there are layers and in layers there are neurons. Each neuron finds a similarity with itself onto another neuron across another layer, these similarities are done with the interconnection of each neuron but that connection has relevant amount of feedback towards how similar these neurons are to each other and the connection between them. Depending on the similarity becomes weighted, the more weight there is on the connection, the more it will influence that neuron and that neuron onto another neuron. That's for weights.. But what about Bias.
