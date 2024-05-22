@@ -1,4 +1,4 @@
-## Run An Gen-LLM From Scratch
+## Run A Gen-LLM From Scratch
 Today I'll show you how to run several open source Generative LLM using Python, We'll look at a view concepts, than just pure code. If you want to do the same thing did, you can feel free to follow the steps I'll show 😊.
 
 Let's start!
