@@ -160,6 +160,7 @@ pip install -r requirements.txt
 
 Since we can't exactly request from a url on a dependencies with the requirements.txt or else it would mess up the other dependencies, you would have to manually type in the command in the console, in order to install the right torch version for cuda, view pytorch website for the latest installation depending on your os:
 https://pytorch.org/
+yeah
 
 In this whole project we will go over how to use RAG with Gemma-3b-ints float16 at first but than use others models like gpt-3.5 turbo, gpt-4o, llama3, xgen and bloom. Gemma can be a great model to start as it's not big but not very small that it's useless. Now let me go over what this 3b stands for. In the LLM's there are parameters, these parameters are also seen in Deep Learning as the Weights & Bias of the model and of course when i say "model" I'm referring to the base Large Language Model (LLM) or Algorithm but more exactly LLM. 
 
