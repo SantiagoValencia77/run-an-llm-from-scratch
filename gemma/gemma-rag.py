@@ -5,4 +5,4 @@ if torch.cuda.is_available():
 else:
     print("GPU Off.")
 
-print("Cool")
+print("Cools")
