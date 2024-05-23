@@ -33,9 +33,9 @@ This bashrc file, acts as sort of the same as storing your local environment and
 So, in the bottom you can place:
 ~~~
 # Openai API keys
-export OPEN_AI_API_KEY=['place_your_secret_key_here']
+export OPEN_AI_API_KEY=place_your_secret_key_here
 ~~~
-this just click on 'ctrl + o'(Write out) and 'Enter'(Save) than 'ctrl + x'(close)
+this just click on 'ctrl + o'(Write out) and 'Enter'(Save) than 'ctrl + x'(close), you don't need to '' quote your value in the api key
 To commit the changes to your console just type:
 ~~~
 source ~/.bashrc
