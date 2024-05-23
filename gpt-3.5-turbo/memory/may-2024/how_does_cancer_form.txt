@@ -1,0 +1,16 @@
+Current Question: how does cancer form
+
+Cancer forms when one or more genes in a cell change or mutate, leading to abnormal cell behavior. These gene mutations can cause cells to multiply out of control, resulting in the development of cancer. The fundamental abnormality in cancer development is the unregulated proliferation of cancer cells, which grow and divide uncontrollably, invading normal tissues and potentially spreading throughout the body. Cancer can start with changes in a single cell or a small group of cells, leading to the formation of a primary tumor. Some cancers, such as leukemia, start from blood cells rather than solid tumors.
+
+To understand how cancer forms, it's essential to know that all cancers begin in cells, the basic units of our body. Our body is composed of millions of cells, each containing genes that provide instructions for cell behavior. Changes in these genes, known as mutations or pathogenic variants, can disrupt the normal control mechanisms that regulate cell division. This disruption can cause cells to grow and multiply excessively, forming a lump or tumor. There are different types of gene mutations, including acquired mutations that occur during a person's lifetime.
+
+In summary, cancer formation involves genetic changes that lead to abnormal cell growth and division. Understanding the underlying mechanisms of cancer development can help in early detection, prevention, and targeted treatment strategies. If you have any specific concerns or questions about cancer formation, feel free to ask for more detailed information or guidance.
+
+Originated Source:
+
+ They don't form solid tumours. Instead, the cancer cells build up in the blood and sometimes the bone marrow . For a cancer to start, certain changes take place within the genes of a cell or a group of cells. Genes and cell division Different types of cells in the body do different jobs. But they are similar. All cells have a control centre called a nucleus. Inside the nucleus are chromosomes made up of thousands of genes. Genes contain long strings of DNA (deoxyribonucleic acid), which are coded messages that tell the cell how to behave. Each gene is an instruction that tells the cell to make something. This could be a protein or a different type of molecule called RNA (ribonucleic acid).
+Source Directed : https://www.cancerresearchuk.org/about-cancer/what-is-cancer/how-cancer-starts
+
+Date: May 13, 2024
+Time: 10:24:35
+

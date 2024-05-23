@@ -1,0 +1,61 @@
+Original Query: how does cancer grow
+
+Base Prompt: In this text, you will act as supportive assistant.
+Give yourself room to think.
+Explain each topic with facts and also suggestions based on the users needs.
+Keep your answers thorough but practical.
+
+Here are the past questions and answers you gave to the user, to serve you as a memory:
+
+
+Answer the User query regardless if there was past questions or not.
+
+User query: how does cancer grow
+Answer:
+
+Output:
+
+Thank you for the guidance. I will make sure to provide detailed and practical explanations for each topic the user asks about. Let's get started! 
+
+User query: how does cancer grow
+
+Cancer is a complex disease that involves the uncontrolled growth and spread of abnormal cells in the body. The process of cancer growth can vary depending on the type of cancer, but in general, it starts with a mutation in the DNA of a cell that causes it to divide uncontrollably. These mutated cells can form a mass of tissue called a tumor. 
+
+As the cancer cells continue to divide and grow, they can invade nearby tissues and organs, disrupting their normal function. Cancer cells can also break away from the original tumor and travel through the bloodstream or lymphatic system to other parts of the body, where they can form new tumors in a process called metastasis.
+
+To prevent cancer growth, it is important to maintain a healthy lifestyle, including eating a balanced diet, exercising regularly, avoiding tobacco and excessive alcohol consumption, and getting regular screenings for early detection. Treatment options for cancer may include surgery, chemotherapy, radiation therapy, targeted therapy, immunotherapy, or a combination of these approaches, depending on the type and stage of the cancer.
+
+If you have any specific concerns or questions about cancer growth or prevention, feel free to ask for more information.
+
+
+
+Json format response: {
+    "id": "chatcmpl-9OTIg6yID2bFljmu4Hd5NVeoIaXjq",
+    "choices": [
+        {
+            "finish_reason": "stop",
+            "index": 0,
+            "logprobs": null,
+            "message": {
+                "content": "Thank you for the guidance. I will make sure to provide detailed and practical explanations for each topic the user asks about. Let's get started! \n\nUser query: how does cancer grow\n\nCancer is a complex disease that involves the uncontrolled growth and spread of abnormal cells in the body. The process of cancer growth can vary depending on the type of cancer, but in general, it starts with a mutation in the DNA of a cell that causes it to divide uncontrollably. These mutated cells can form a mass of tissue called a tumor. \n\nAs the cancer cells continue to divide and grow, they can invade nearby tissues and organs, disrupting their normal function. Cancer cells can also break away from the original tumor and travel through the bloodstream or lymphatic system to other parts of the body, where they can form new tumors in a process called metastasis.\n\nTo prevent cancer growth, it is important to maintain a healthy lifestyle, including eating a balanced diet, exercising regularly, avoiding tobacco and excessive alcohol consumption, and getting regular screenings for early detection. Treatment options for cancer may include surgery, chemotherapy, radiation therapy, targeted therapy, immunotherapy, or a combination of these approaches, depending on the type and stage of the cancer.\n\nIf you have any specific concerns or questions about cancer growth or prevention, feel free to ask for more information.",
+                "role": "assistant",
+                "function_call": null,
+                "tool_calls": null
+            }
+        }
+    ],
+    "created": 1715619530,
+    "model": "gpt-3.5-turbo-0125",
+    "object": "chat.completion",
+    "system_fingerprint": null,
+    "usage": {
+        "completion_tokens": 269,
+        "prompt_tokens": 104,
+        "total_tokens": 373
+    }
+}
+
+Model used: gpt-3.5-turbo
+Date: May 13, 2024
+Time: 09:58:56
+

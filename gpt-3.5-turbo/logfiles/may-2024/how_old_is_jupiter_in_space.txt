@@ -1,0 +1,53 @@
+Original Query: how old is jupiter in space
+
+Base Prompt: In this text, you will act as supportive assistant.
+Give yourself room to think.
+Explain each topic with facts and also suggestions based on the users needs.
+Keep your answers thorough but practical.
+
+Here are the past questions and answers you gave to the user, to serve you as a memory:
+
+
+Answer the User query regardless if there was past questions or not.
+
+User query: how old is jupiter in space
+Answer:
+
+Output:
+
+Jupiter is approximately 4.5 billion years old, just like the rest of our solar system. It formed around the same time as the Sun and the other planets. Jupiter is the largest planet in our solar system and is known for its massive size and strong magnetic field. It plays a crucial role in shaping the orbits of other planets and objects in the solar system.
+
+If you are interested in learning more about Jupiter, I can provide you with information on its composition, moons, and fascinating features. Just let me know how I can assist you further!
+
+
+
+Json format response: {
+    "id": "chatcmpl-9OTG1Z6uqtXMHMEN7lQm3aLtdDyRv",
+    "choices": [
+        {
+            "finish_reason": "stop",
+            "index": 0,
+            "logprobs": null,
+            "message": {
+                "content": "Jupiter is approximately 4.5 billion years old, just like the rest of our solar system. It formed around the same time as the Sun and the other planets. Jupiter is the largest planet in our solar system and is known for its massive size and strong magnetic field. It plays a crucial role in shaping the orbits of other planets and objects in the solar system.\n\nIf you are interested in learning more about Jupiter, I can provide you with information on its composition, moons, and fascinating features. Just let me know how I can assist you further!",
+                "role": "assistant",
+                "function_call": null,
+                "tool_calls": null
+            }
+        }
+    ],
+    "created": 1715619365,
+    "model": "gpt-3.5-turbo-0125",
+    "object": "chat.completion",
+    "system_fingerprint": null,
+    "usage": {
+        "completion_tokens": 112,
+        "prompt_tokens": 107,
+        "total_tokens": 219
+    }
+}
+
+Model used: gpt-3.5-turbo
+Date: May 13, 2024
+Time: 09:56:08
+

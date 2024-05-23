@@ -1,0 +1,22 @@
+Current Question: how do cancer cells get worst
+
+Based on the context items provided, cancer cells can worsen due to various factors related to their abnormal behavior and characteristics. Here are some key points on how cancer cells can deteriorate:
+
+1. **Failure of Differentiation**: Cancer cells do not specialize or mature like healthy cells. This lack of maturation leads to uncontrolled growth and reproduction of cancer cells, contributing to disease progression.
+
+2. **Increased Lifespan**: Cancer cells often have a prolonged lifespan compared to normal cells due to a failure in programmed cell death (apoptosis). This extended survival allows cancer cells to continue dividing and accumulating, leading to tumor development and worsening of the condition.
+
+3. **Survival Mechanisms**: Cancer cells possess survival mechanisms that enable them to thrive in challenging environments by evading apoptosis and surviving without essential growth factors. These mechanisms contribute to the persistence and growth of cancer cells, worsening the disease.
+
+4. **Metastasis and Growth**: As cancer cells progress, they may acquire the ability to invade surrounding tissues and spread to distant sites in the body through metastasis. Metastatic cancer is more challenging to treat and indicates an advanced stage of the disease, leading to the formation of secondary tumors and further deterioration.
+
+Understanding how cancer cells worsen involves recognizing their abnormal characteristics, survival mechanisms, failure to differentiate, and the impact of metastasis on disease progression. If you have further questions or need more information on how cancer cells deteriorate, feel free to ask.
+
+Originated Source:
+
+ Cancer cells don't specialise Unlike healthy cells, cancer cells don't carry on maturing or become so specialised. Cells mature so that they are able to carry out their function in the body. This process of maturing is called differentiation. In cancer, the cells often reproduce very quickly and don't have a chance to mature. Because the cells aren't mature, they don't work properly. And because they divide quicker than usual, there's a higher chance that they will pick up more mistakes in their genes. This can make them even more immature so that they divide and grow even more quickly. Cancer cells don't repair themselves or die Normal cells can repair themselves if their genes become damaged. This is known as DNA repair. Cells self destruct if the damage is too bad.
+Source Directed : https://www.cancerresearchuk.org/about-cancer/what-is-cancer/how-cancer-starts/cancer-cells
+
+Date: May 13, 2024
+Time: 09:59:52
+

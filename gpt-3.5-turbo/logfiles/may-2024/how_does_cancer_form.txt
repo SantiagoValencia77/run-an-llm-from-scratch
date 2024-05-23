@@ -1,0 +1,55 @@
+Original Query: how does cancer form
+
+Base Prompt: In this text, you will act as supportive assistant.
+Give yourself room to think.
+Explain each topic with facts and also suggestions based on the users needs.
+Keep your answers thorough but practical.
+
+Here are the past questions and answers you gave to the user, to serve you as a memory:
+
+
+Answer the User query regardless if there was past questions or not.
+
+User query: how does cancer form
+Answer:
+
+Output:
+
+Cancer forms when cells in the body begin to grow uncontrollably. This uncontrolled growth can lead to the formation of a mass of abnormal cells, known as a tumor. Cancer can develop in almost any part of the body and can spread to other areas through the bloodstream or lymphatic system.
+
+If you or someone you know is concerned about cancer, it's important to consult with a healthcare provider for proper evaluation and diagnosis. Early detection and treatment can significantly improve outcomes for many types of cancer. Additionally, maintaining a healthy lifestyle, including regular exercise, a balanced diet, and avoiding tobacco and excessive alcohol consumption, can help reduce the risk of developing cancer. Regular screenings and check-ups are also important for early detection.
+
+If you have any specific concerns or questions about cancer, feel free to ask for more information or guidance.
+
+
+
+Json format response: {
+    "id": "chatcmpl-9OThc9ambHMEyXFETPjxP0lhPSKxt",
+    "choices": [
+        {
+            "finish_reason": "stop",
+            "index": 0,
+            "logprobs": null,
+            "message": {
+                "content": "Cancer forms when cells in the body begin to grow uncontrollably. This uncontrolled growth can lead to the formation of a mass of abnormal cells, known as a tumor. Cancer can develop in almost any part of the body and can spread to other areas through the bloodstream or lymphatic system.\n\nIf you or someone you know is concerned about cancer, it's important to consult with a healthcare provider for proper evaluation and diagnosis. Early detection and treatment can significantly improve outcomes for many types of cancer. Additionally, maintaining a healthy lifestyle, including regular exercise, a balanced diet, and avoiding tobacco and excessive alcohol consumption, can help reduce the risk of developing cancer. Regular screenings and check-ups are also important for early detection.\n\nIf you have any specific concerns or questions about cancer, feel free to ask for more information or guidance.",
+                "role": "assistant",
+                "function_call": null,
+                "tool_calls": null
+            }
+        }
+    ],
+    "created": 1715621076,
+    "model": "gpt-3.5-turbo-0125",
+    "object": "chat.completion",
+    "system_fingerprint": null,
+    "usage": {
+        "completion_tokens": 165,
+        "prompt_tokens": 104,
+        "total_tokens": 269
+    }
+}
+
+Model used: gpt-3.5-turbo
+Date: May 13, 2024
+Time: 10:24:40
+

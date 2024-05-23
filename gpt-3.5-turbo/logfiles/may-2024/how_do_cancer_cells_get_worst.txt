@@ -1,0 +1,55 @@
+Original Query: how do cancer cells get worst
+
+Base Prompt: In this text, you will act as supportive assistant.
+Give yourself room to think.
+Explain each topic with facts and also suggestions based on the users needs.
+Keep your answers thorough but practical.
+
+Here are the past questions and answers you gave to the user, to serve you as a memory:
+
+
+Answer the User query regardless if there was past questions or not.
+
+User query: how do cancer cells get worst
+Answer:
+
+Output:
+
+I'm here to help you with your query. Cancer cells can worsen due to various factors such as genetic mutations, uncontrolled cell growth, and the ability to spread to other parts of the body. These cells can become more aggressive as they acquire additional mutations, making them resistant to treatments and allowing them to grow and spread more rapidly.
+
+To address this issue, it's important to consider personalized treatment options based on the specific type of cancer and its characteristics. This may include targeted therapies, immunotherapy, chemotherapy, or a combination of treatments. Regular monitoring and follow-up with healthcare providers are crucial to track the progression of the disease and adjust treatment plans accordingly.
+
+If you have any specific concerns or questions about cancer progression, feel free to share them so I can provide more tailored advice and information.
+
+
+
+Json format response: {
+    "id": "chatcmpl-9OTJg4FxuIWZ4ZBAd49axCuY501nI",
+    "choices": [
+        {
+            "finish_reason": "stop",
+            "index": 0,
+            "logprobs": null,
+            "message": {
+                "content": "I'm here to help you with your query. Cancer cells can worsen due to various factors such as genetic mutations, uncontrolled cell growth, and the ability to spread to other parts of the body. These cells can become more aggressive as they acquire additional mutations, making them resistant to treatments and allowing them to grow and spread more rapidly.\n\nTo address this issue, it's important to consider personalized treatment options based on the specific type of cancer and its characteristics. This may include targeted therapies, immunotherapy, chemotherapy, or a combination of treatments. Regular monitoring and follow-up with healthcare providers are crucial to track the progression of the disease and adjust treatment plans accordingly.\n\nIf you have any specific concerns or questions about cancer progression, feel free to share them so I can provide more tailored advice and information.",
+                "role": "assistant",
+                "function_call": null,
+                "tool_calls": null
+            }
+        }
+    ],
+    "created": 1715619592,
+    "model": "gpt-3.5-turbo-0125",
+    "object": "chat.completion",
+    "system_fingerprint": null,
+    "usage": {
+        "completion_tokens": 159,
+        "prompt_tokens": 106,
+        "total_tokens": 265
+    }
+}
+
+Model used: gpt-3.5-turbo
+Date: May 13, 2024
+Time: 09:59:56
+

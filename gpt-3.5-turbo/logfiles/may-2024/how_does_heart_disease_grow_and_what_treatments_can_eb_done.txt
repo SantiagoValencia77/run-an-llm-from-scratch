@@ -1,0 +1,65 @@
+Original Query: how does heart disease grow and what treatments can eb done
+
+Base Prompt: In this text, you will act as supportive assistant.
+Give yourself room to think.
+Explain each topic with facts and also suggestions based on the users needs.
+Keep your answers thorough but practical.
+
+Here are the past questions and answers you gave to the user, to serve you as a memory:
+
+
+Answer the User query regardless if there was past questions or not.
+
+User query: how does heart disease grow and what treatments can eb done
+Answer:
+
+Output:
+
+Thank you for the guidance. I will make sure to provide detailed and practical responses to the user's queries. Let's start with the user's question about heart disease.
+
+Heart disease, also known as cardiovascular disease, develops over time due to various factors such as high blood pressure, high cholesterol, smoking, diabetes, obesity, and lack of physical activity. These factors can lead to the buildup of plaque in the arteries, causing them to narrow and restrict blood flow to the heart.
+
+Treatment for heart disease depends on the specific condition and severity of the disease. Here are some common treatments that can be considered:
+
+1. Lifestyle changes: Adopting a healthy lifestyle can help prevent and manage heart disease. This includes eating a balanced diet, exercising regularly, maintaining a healthy weight, quitting smoking, and managing stress.
+
+2. Medications: Depending on the type of heart disease, medications such as statins (to lower cholesterol), beta-blockers (to reduce blood pressure), and antiplatelet drugs (to prevent blood clots) may be prescribed.
+
+3. Procedures: In more severe cases, procedures such as angioplasty (to open blocked arteries), stent placement (to keep arteries open), or bypass surgery (to create new routes for blood flow) may be necessary.
+
+4. Cardiac rehabilitation: This program involves supervised exercise, education, and counseling to help improve heart health and reduce the risk of future heart problems.
+
+It's important to consult with a healthcare provider to determine the most appropriate treatment plan based on individual needs and medical history. Regular check-ups and monitoring are also crucial in managing heart disease effectively. If you have any specific concerns or questions about heart disease, feel free to ask for more information.
+
+
+
+Json format response: {
+    "id": "chatcmpl-9OTi9XOqKAEdEGrKlbt9sWGr2diit",
+    "choices": [
+        {
+            "finish_reason": "stop",
+            "index": 0,
+            "logprobs": null,
+            "message": {
+                "content": "Thank you for the guidance. I will make sure to provide detailed and practical responses to the user's queries. Let's start with the user's question about heart disease.\n\nHeart disease, also known as cardiovascular disease, develops over time due to various factors such as high blood pressure, high cholesterol, smoking, diabetes, obesity, and lack of physical activity. These factors can lead to the buildup of plaque in the arteries, causing them to narrow and restrict blood flow to the heart.\n\nTreatment for heart disease depends on the specific condition and severity of the disease. Here are some common treatments that can be considered:\n\n1. Lifestyle changes: Adopting a healthy lifestyle can help prevent and manage heart disease. This includes eating a balanced diet, exercising regularly, maintaining a healthy weight, quitting smoking, and managing stress.\n\n2. Medications: Depending on the type of heart disease, medications such as statins (to lower cholesterol), beta-blockers (to reduce blood pressure), and antiplatelet drugs (to prevent blood clots) may be prescribed.\n\n3. Procedures: In more severe cases, procedures such as angioplasty (to open blocked arteries), stent placement (to keep arteries open), or bypass surgery (to create new routes for blood flow) may be necessary.\n\n4. Cardiac rehabilitation: This program involves supervised exercise, education, and counseling to help improve heart health and reduce the risk of future heart problems.\n\nIt's important to consult with a healthcare provider to determine the most appropriate treatment plan based on individual needs and medical history. Regular check-ups and monitoring are also crucial in managing heart disease effectively. If you have any specific concerns or questions about heart disease, feel free to ask for more information.",
+                "role": "assistant",
+                "function_call": null,
+                "tool_calls": null
+            }
+        }
+    ],
+    "created": 1715621109,
+    "model": "gpt-3.5-turbo-0125",
+    "object": "chat.completion",
+    "system_fingerprint": null,
+    "usage": {
+        "completion_tokens": 343,
+        "prompt_tokens": 111,
+        "total_tokens": 454
+    }
+}
+
+Model used: gpt-3.5-turbo
+Date: May 13, 2024
+Time: 10:25:17
+

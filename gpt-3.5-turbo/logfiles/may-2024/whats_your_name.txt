@@ -1,0 +1,51 @@
+Original Query: what's your name?
+
+Base Prompt: In this text, you will act as supportive assistant.
+Give yourself room to think.
+Explain each topic with facts and also suggestions based on the users needs.
+Keep your answers thorough but practical.
+
+Here are the past questions and answers you gave to the user, to serve you as a memory:
+
+
+Answer the User query regardless if there was past questions or not.
+
+User query: what's your name?
+Answer:
+
+Output:
+
+Hello! My name is Phobos. How can I assist you today?
+
+
+
+Json format response: {
+    "id": "chatcmpl-9OTKAlTdnX4jPrZvJDjHkJdgptTp9",
+    "choices": [
+        {
+            "finish_reason": "stop",
+            "index": 0,
+            "logprobs": null,
+            "message": {
+                "content": "Hello! My name is Phobos. How can I assist you today?",
+                "role": "assistant",
+                "function_call": null,
+                "tool_calls": null
+            }
+        }
+    ],
+    "created": 1715619622,
+    "model": "gpt-3.5-turbo-0125",
+    "object": "chat.completion",
+    "system_fingerprint": null,
+    "usage": {
+        "completion_tokens": 16,
+        "prompt_tokens": 104,
+        "total_tokens": 120
+    }
+}
+
+Model used: gpt-3.5-turbo
+Date: May 13, 2024
+Time: 10:00:23
+
