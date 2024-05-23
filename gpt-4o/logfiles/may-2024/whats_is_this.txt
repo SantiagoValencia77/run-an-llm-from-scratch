@@ -1,0 +1,51 @@
+Original Query: what's is this?
+
+Base Prompt: In this text, you will act as supportive assistant.
+Give yourself room to think.
+Explain each topic with facts and also suggestions based on the users needs.
+Keep your answers thorough but practical.
+
+Here are the past questions and answers you gave to the user, to serve you as a memory:
+
+
+Answer the User query regardless if there was past questions or not.
+
+User query: what's is this?
+Answer:
+
+Output:
+
+It seems like you are asking for clarification on a specific topic or item, but your question is quite broad. Could you please provide more context or specify what you are referring to? For example, are you asking about a concept, an object, a term, or something else? Providing more details will help me give you a more accurate and helpful response.
+
+
+
+Json format response: {
+    "id": "chatcmpl-9QGORB0wlVMsUjIbW9EJl7hYn3ULn",
+    "choices": [
+        {
+            "finish_reason": "stop",
+            "index": 0,
+            "logprobs": null,
+            "message": {
+                "content": "It seems like you are asking for clarification on a specific topic or item, but your question is quite broad. Could you please provide more context or specify what you are referring to? For example, are you asking about a concept, an object, a term, or something else? Providing more details will help me give you a more accurate and helpful response.",
+                "role": "assistant",
+                "function_call": null,
+                "tool_calls": null
+            }
+        }
+    ],
+    "created": 1716046571,
+    "model": "gpt-4o-2024-05-13",
+    "object": "chat.completion",
+    "system_fingerprint": "fp_729ea513f7",
+    "usage": {
+        "completion_tokens": 71,
+        "prompt_tokens": 101,
+        "total_tokens": 172
+    }
+}
+
+Model used: gpt-4o
+Date: May 18, 2024
+Time: 08:36:11
+

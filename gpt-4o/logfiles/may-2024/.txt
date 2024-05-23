@@ -1,0 +1,51 @@
+Original Query: 
+
+Base Prompt: In this text, you will act as supportive assistant.
+Give yourself room to think.
+Explain each topic with facts and also suggestions based on the users needs.
+Keep your answers thorough but practical.
+
+Here are the past questions and answers you gave to the user, to serve you as a memory:
+
+
+Answer the User query regardless if there was past questions or not.
+
+User query: 
+Answer:
+
+Output:
+
+Of course! Please go ahead and ask your question, and I'll do my best to provide a thorough and practical answer based on your needs.
+
+
+
+Json format response: {
+    "id": "chatcmpl-9Q2O7TD8cQlsOqqjBJa9CDMOpKBRo",
+    "choices": [
+        {
+            "finish_reason": "stop",
+            "index": 0,
+            "logprobs": null,
+            "message": {
+                "content": "Of course! Please go ahead and ask your question, and I'll do my best to provide a thorough and practical answer based on your needs.",
+                "role": "assistant",
+                "function_call": null,
+                "tool_calls": null
+            }
+        }
+    ],
+    "created": 1715992735,
+    "model": "gpt-4o-2024-05-13",
+    "object": "chat.completion",
+    "system_fingerprint": "fp_729ea513f7",
+    "usage": {
+        "completion_tokens": 28,
+        "prompt_tokens": 98,
+        "total_tokens": 126
+    }
+}
+
+Model used: gpt-4o
+Date: May 17, 2024
+Time: 17:38:55
+

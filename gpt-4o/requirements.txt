@@ -1,0 +1,9 @@
+pandas
+numpy
+gradio
+tqdm
+huggingface_hub
+torch
+tqdm
+openai
+openai-whisper
