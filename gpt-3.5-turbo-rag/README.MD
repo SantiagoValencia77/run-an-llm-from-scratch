@@ -8,7 +8,7 @@ Now this is a bit different as your using more of an API for the LLM and configu
 
 ### You need to do this project on your own.
 
-You can view the app.py that I made but only as a reference, use it sort of like a review of the way how i did it but i want you to remember and already have in your head how to create, chunk, batch, tokenize and generate in text generation. You can already re-use the existing chunks_tokinzed.csv you made in gemma, since your using the same rag but if you want to make the rag all over again but let's now with your data and in a different subject such as sports: soccer, basketball or in video games or anything else, your more than welcome too and I actually recommend that 😄
+You can view the app.py that I made but only as a reference or cheatsheet when your really not sure, use it sort of like a review of the way how I did it but i want you to do it your own way, and i want you to remember and already have in your head how to create, chunk, batch, tokenize in text generation. You can  re-use the existing chunks_tokinzed.csv you made in gemma, since your using the same rag but if you want to make the rag all over again but with your data and in a different subject such as sports: soccer, basketball or in video games or anything else, your more than welcome too and I actually recommend that 😄. I just did this in a regular .py file, which is best. But since your beggining and you need reminders to yourself in markdown and also run just a few cells to make sure what your doing is right, than you can do that. No worries.
 
 
 ## OpenAI Configuration
@@ -40,6 +40,26 @@ To commit the changes to your console just type:
 ~~~
 source ~/.bashrc
 ~~~
+
+### Hugging Face Spaces
+
+In hugging face, since your containerizing your project to use the environments you need while also connecting to hugging face hardware, you need to place your api key in the secret variables spaces has, you can find this if you go to settings in your spaces workspace.
+
+Just simply place your variable name on the name and value on value.
+
+
+### Google Colab
+
+In colab there are 2 ways to do this
+
+**Storing directly in colab**:
+In the left section you will see a key symbol in the side menu bar, click on it. From here you can click on add new secret and you just enter the name and value.
+However. There is a issue with this, this method is very practical but if you decide to share your notebook with anyone else that has edit access to the notebook, they will see the secret key and it's value, so PLEASE use this **WITH CAUTION**.
+
+**Storing in Secret Manager inside google cloud**
+Google Cloud offers you a way to store your secret environment variable with a lot of security so that no one can access besides you, here is the way to do it: https://g.co/gemini/share/7cae88c83805
+
+The onle downside to this is that even though you can have 10k request for free, afterwards you will get billed. Even if your using it for free now, you need to place you billing info as this 'Free' service it actually more a trial google gives to everyone who is new.
 
 In this repository I have the environment variable set as 'OPEN_AI_API_KEY' but you can change it to whatever name you put yours 
 
