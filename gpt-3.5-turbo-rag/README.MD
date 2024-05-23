@@ -35,7 +35,7 @@ So, in the bottom you can place:
 # Openai API keys
 export OPEN_AI_API_KEY=place_your_secret_key_here
 ~~~
-this just click on 'ctrl + o'(Write out) and 'Enter'(Save) than 'ctrl + x'(close), you don't need to '' quote your value in the api key
+this just click on 'ctrl + o'(Write out) and 'Enter'(Save) than 'ctrl + x'(close), you don't need to '' quote your value in the api key.
 To commit the changes to your console just type:
 ~~~
 source ~/.bashrc
