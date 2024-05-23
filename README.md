@@ -4,7 +4,7 @@ Today I'll show you how to run several open source Generative LLM using Python, 
 Let's start!
 
 
-There are several ways you can run this, on jupyter notebook or on visual studio code, it's really up too you. I'm just going to stick to VS Code (Visual Studio Code) as tradition. A really good advice I can give for deep learning workspaces is to stick close to the Linux environment because nvidia configuration works really smoothly on Linux compared to windows, so to avoid hassle in the future, I recommend to you that if you already have Linux as your OS, well your setup. If you have windows, no worries, we can install WSL 2 on your OS to work as a bridge to Linux distribution such as Ubuntu.
+There are several ways you can run this, on Jupyter notebook or on visual studio code, it’s really up too you. I would stick to VS Code (Visual Studio Code) as tradition if you have the right GPU, which we’ll mention later. But many people will have a different setup so we’ll use Google Colab here, as it’s the most straight forward approach with least challenges →Recommend: Use Google Collab (Free GPU). A really good advice I can give for deep learning workspaces is to stick close to the Linux environment because nvidia configuration works really smoothly on Linux compared to windows, so to avoid hassle in the future, I recommend that if you already have Linux as your OS, well your setup. If you have windows, no worries, you can install WSL 2 on your OS to work as a bridge to Linux distribution such as Ubuntu.
 
 
 If you are using windows follow the steps i'll show. Otherwise just ignore this and skip too (**Nvidia Installations**):
