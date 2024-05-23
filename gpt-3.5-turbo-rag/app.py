@@ -16,7 +16,6 @@ import textwrap
 # from flask import Flask, request, jsonify
 import gradio as gr
 
-print('cool')
 DESCRIPTION = '''
 <div>
 <h1 style="text-align: center;">Phobos 🪐</h1>
