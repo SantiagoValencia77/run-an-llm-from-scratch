@@ -1,0 +1,7 @@
+### Bloom
+
+Now this is by far the worst LLM, i've used.. In terms of getting a factual result.
+
+We can't blame bloom though because there is no such thing as a 'dumb' or 'stupid' model, it just depends on the algorithm and mostly the training data it was given. Bloom was trained on many creative prompts like poems and stories, so that's why when you ask a question it might respond to you but not give the answer you were thinking, now of course we can see that bloom lacks a bit of precision which needs to be optimized and trained more in it's algorithm which involves a bit more math and tuning, but Bloom responds creatively, just to creatively, if you want you can change this model to be creative still but actually answer with context towards the user's question. This will be hard because your going to retrain the model takes a lot of computation and experience.
+
+I mostly wanted to show you this to give you another perspective of a different model that tries achieve something different compared to GPT's or gemma. This one is creative, in fact the name i placed `mushroom` was actually pure coincidence but it's hilarious that it's name sticks with it because this model is so high up to pluto. 😂
