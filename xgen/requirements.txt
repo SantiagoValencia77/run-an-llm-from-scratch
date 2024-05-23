@@ -1,0 +1,6 @@
+panda
+torch
+gradio
+numpy
+transformers
+tiktoken
