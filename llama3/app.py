@@ -11,7 +11,7 @@ HF_TOKEN = os.environ.get("HF_TOKEN", None)
 
 DESCRIPTION = '''
 <div>
-<h1 style="text-align: center;">Loki 👁️</h1>
+<h1 style="text-align: center;">Llama3 🦙</h1>
 <p>This uses an open source Large Language Model called <a href="https://huggingface.co/meta-llama/Meta-Llama-3-8B"><b>Llama3-8b</b></a></p>
 </div>
 '''
