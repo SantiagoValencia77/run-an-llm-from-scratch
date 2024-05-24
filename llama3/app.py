@@ -25,11 +25,11 @@ terminators = [
 ]
 
 @spaces.GPU(duration=120)
-def chat_llama3_8b(message: str, 
-                   history: list, 
-                   temperature: float, 
-                   max_new_tokens: int
-                   ) -> str:
+def llama_generation(message: str, 
+                     history: list, 
+                     temperature: float, 
+                     max_new_tokens: int
+                     ) -> str:
     """
     Passes input, converts in tokens, generate's with ids and outputs
     the text out.
@@ -71,7 +71,7 @@ with gr.Blocks(fill_height=True) as demo:
     
     gr.Markdown(DESCRIPTION)
     gr.ChatInterface(
-        fn=chat_llama3_8b,
+        fn=llama_generation,
         chatbot=chatbot,
         fill_height=True,
         additional_inputs_accordion=gr.Accordion(label="⚙️ Parameters", open=False, render=False),
