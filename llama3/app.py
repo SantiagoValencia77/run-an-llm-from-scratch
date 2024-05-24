@@ -65,7 +65,7 @@ def llama_generation(message: str,
         
 
 # Gradio block
-chatbot=gr.Chatbot(height=600, label='Loki AI')
+chatbot=gr.Chatbot(height=600, label='Llama AI')
 
 with gr.Blocks(fill_height=True) as demo:
     
