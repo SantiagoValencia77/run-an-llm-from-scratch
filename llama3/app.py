@@ -1,77 +1,102 @@
-import torch
 import gradio as gr
-import numpy as np
-from transformers import AutoTokenizer, AutoModelForCausalLM
-from huggingface_hub import login
 import os
+import spaces
+from transformers import AutoModelForCausalLM, AutoTokenizer, TextIteratorStreamer
+from threading import Thread
+import torch
 
-TOKEN = os.getenv('HF_AUTH_TOKEN')
-login(token=TOKEN,
-      add_to_git_credential=False)
+# Set an environment variable
+HF_TOKEN = os.environ.get("HF_TOKEN", None)
 
-# UI Description (HTML)
+
 DESCRIPTION = '''
 <div>
-<h1 style="text-align: center;">Sirius 🐦‍⬛</h1>
-<p>An Open LLM <b href="https://huggingface.co/meta-llama/Meta-Llama-3-8B">'Llama3 8b'</b>, Be sure to ask any questions!</p>
+<h1 style="text-align: center;">Loki 👁️</h1>
+<p>This uses an open source Large Language Model called <a href="https://huggingface.co/meta-llama/Meta-Llama-3-8B"><b>Llama3-8b</b></a></p>
 </div>
 '''
 
-# Model Instance
-tokenizer = AutoTokenizer.from_pretrained("meta-llama/Meta-Llama-3-8B") # Placed on cpu
-model = AutoModelForCausalLM.from_pretrained("meta-llama/Meta-Llama-3-8B", token=TOKEN, torch_dtype=torch.float16).to('cuda') # On GPU
+# Load the tokenizer and model
+tokenizer = AutoTokenizer.from_pretrained("meta-llama/Meta-Llama-3-8B-Instruct")
+model = AutoModelForCausalLM.from_pretrained("meta-llama/Meta-Llama-3-8B-Instruct", torch_dtype=torch.float16).to('cuda')
+terminators = [
+    tokenizer.eos_token_id,
+    tokenizer.convert_tokens_to_ids("<|eot_id|>")
+]
 
-
-# Create the model inputs and output function
-def ask_llama3(input: str,
-               history):
+@spaces.GPU(duration=120)
+def chat_llama3_8b(message: str, 
+                   history: list, 
+                   temperature: float, 
+                   max_new_tokens: int
+                   ) -> str:
     """
-    This will pass input into the tokenizer, those input_ids
-    will pase into the model for generation and finally
-    those output_ids will be decoded into text.
+    Passes input, converts in tokens, generate's with ids and outputs
+    the text out.
     """
+    conversation = []
+    for user, assistant in history:
+        conversation.extend([{"role": "user", "content": user}, {"role": "assistant", "content": assistant}])
+    conversation.append({"role": "user", "content": message})
 
-    # Prompt template for LLM "context"
-    header = (
-        "A chat between a curious human and an artificial intelligence assistant called Sirius. "
-        "The assistant gives helpful, detailed, and polite answers to the human's questions.\n\n"
+    input_ids = tokenizer.apply_chat_template(conversation, return_tensors="pt").to(model.device)
+    
+    streamer = TextIteratorStreamer(tokenizer, timeout=10.0, skip_prompt=True, skip_special_tokens=True)
+
+    generate_kwargs = dict(
+        input_ids= input_ids,
+        streamer=streamer,
+        max_new_tokens=max_new_tokens,
+        do_sample=True,
+        temperature=temperature,
+        eos_token_id=terminators,
     )
+    # This will enforce greedy generation (do_sample=False) when the temperature is passed 0, avoiding the crash.             
+    if temperature == 0:
+        generate_kwargs['do_sample'] = False
+        
+    t = Thread(target=model.generate, kwargs=generate_kwargs)
+    t.start()
 
-    input_ids = tokenizer.encode(header + input, return_tensors='pt').to('cuda')
-    
-    # Generate a response with the input_ids
-    output_encoded = model.generate(input_ids=input_ids,
-                                    max_new_tokens=256)
-    
-    # Decode the output
-    output_decoded = tokenizer.decode(output_encoded[0], skip_special_tokens=True)
-
-    return output_decoded
-
-# Gradio UI
-# def bot_comms(input_text,
-#               history):
-#     """
-#     UI the communicates with gradio and the LLM.
-#     """
+    outputs = []
+    for text in streamer:
+        outputs.append(text)
+        yield "".join(outputs)
+        
 
 # Gradio block
-chatbot=gr.Chatbot(height=600, label="Llama Chatbot")
+chatbot=gr.Chatbot(height=600, label='Loki AI')
 
 with gr.Blocks(fill_height=True) as demo:
+    
     gr.Markdown(DESCRIPTION)
     gr.ChatInterface(
-        fn=ask_llama3,
+        fn=chat_llama3_8b,
         chatbot=chatbot,
         fill_height=True,
-        examples=['How do you make Spaghetti',
-                  'How was the solar system formed',
-                  'Where can learn to program',
-                  'How was does air have hydrogen',
-                  'Tell me a story of batman being the villian as blackbeard'],
-        cache_examples=False
-    )
-
+        additional_inputs_accordion=gr.Accordion(label="⚙️ Parameters", open=False, render=False),
+        additional_inputs=[
+            gr.Slider(minimum=0,
+                      maximum=1, 
+                      step=0.1,
+                      value=0.95, 
+                      label="Temperature", 
+                      render=False),
+            gr.Slider(minimum=128, 
+                      maximum=4096,
+                      step=1,
+                      value=512, 
+                      label="Max new tokens", 
+                      render=False ),
+            ],
+        examples=[
+            ["Make a poem of batman inside willy wonka"],
+            ["How can you a burrito with just flour?"],
+            ["How was saturn formed in 3 sentences"],
+            ["How does the frontal lobe effect playing soccer"],
+            ],
+        cache_examples=False,
+                     )
+        
 if __name__ == "__main__":
     demo.launch()
-
